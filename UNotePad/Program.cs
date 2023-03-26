@@ -33,7 +33,6 @@ try {
         Console.ReadLine();
         return;
     }
-    Console.WriteLine(String.Join(" ",args));
     var ustPath = args[0];
     var ustLines = File.ReadAllLines(ustPath, Encoding.UTF8);
     var lyricLineIndices = new List<int>();
@@ -52,14 +51,14 @@ try {
         }
     }
     //Write into temp txt file
-    var txtPath = "temp.txt";
+    var txtPath = Path.GetFullPath("temp.txt");
     File.WriteAllText(txtPath, lyrics.ToString(),Encoding.UTF8);
 
     //Launch Text Editor
     var startInfo = new ProcessStartInfo()
     {
         FileName = config.TextEditor,
-        Arguments = txtPath,
+        Arguments = config.Argument+" "+txtPath,
         UseShellExecute = config.UseShell
     };
     using (var process = Process.Start(startInfo))

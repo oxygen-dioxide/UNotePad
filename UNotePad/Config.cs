@@ -9,6 +9,7 @@ namespace UNotePad
     public class Config
     {
         public string TextEditor = "";
+        public string Argument = "";
         public bool UseShell = false;
     }
 }
