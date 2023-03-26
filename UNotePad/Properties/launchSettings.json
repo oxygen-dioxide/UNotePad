@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UNotePad": {
+      "commandName": "Project",
+      "commandLineArgs": "E:\\repos\\OpenUtau\\OpenUtau\\bin\\Release\\net6.0-windows\\Cache\\temp.tmp"
+    }
+  }
+}

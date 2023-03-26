@@ -1,0 +1,3 @@
+name=Edit Lyric In Notepad
+execute=UNotePad.exe
+encoding=utf-8
