@@ -52,6 +52,7 @@ jobs:
         path: UNotePad-x86-${{ inputs.version }}.zip
 
     - name: Create release
+      if: ${{ inputs.create-release }}
       uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ inputs.version }}
